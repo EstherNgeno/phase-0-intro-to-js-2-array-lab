@@ -2,55 +2,79 @@
   "stats": {
     "suites": 11,
     "tests": 9,
-    "passes": 9,
+    "passes": 5,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-04-30T16:44:50.076Z",
-    "end": "2024-04-30T16:44:50.802Z",
-    "duration": 726
+    "failures": 4,
+    "start": "2024-07-15T16:47:18.153Z",
+    "end": "2024-07-15T16:47:18.909Z",
+    "duration": 756
   },
   "tests": [
     {
       "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
       "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
-      "duration": 3,
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "appends a cat to the end of the cats array",
       "fullTitle": "index.js Array functions destructivelyAppendCat(name) appends a cat to the end of the cats array",
-      "duration": 1,
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "prepends a cat to the beginning of the cats array",
       "fullTitle": "index.js Array functions destructivelyPrependCat(name) prepends a cat to the beginning of the cats array",
-      "duration": 1,
+      "duration": 2,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Bob', 'Milo', 'Otis' ] to have the same ordered members as [ 'Bob', 'Milo', 'Otis', 'Garfield' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Bob\"\n  \"Milo\"\n  \"Otis\"\n]",
+        "expected": "[\n  \"Bob\"\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n]",
+        "stack": "AssertionError: expected [ 'Bob', 'Milo', 'Otis' ] to have the same ordered members as [ 'Bob', 'Milo', 'Otis', 'Garfield' ]\n    at Context.<anonymous> (test/indexTest.js:29:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "removes the last cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveLastCat() removes the last cat from the cats array",
       "duration": 1,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Otis' ] to have the same ordered members as [ 'Milo', 'Otis' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Otis\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n]",
+        "stack": "AssertionError: expected [ 'Otis' ] to have the same ordered members as [ 'Milo', 'Otis' ]\n    at Context.<anonymous> (test/indexTest.js:37:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "removes the first cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveFirstCat() removes the first cat from the cats array",
       "duration": 1,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Otis', 'Garfield', 'Garfield' ] to have the same ordered members as [ 'Otis', 'Garfield' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Otis\"\n  \"Garfield\"\n  \"Garfield\"\n]",
+        "expected": "[\n  \"Otis\"\n  \"Garfield\"\n]",
+        "stack": "AssertionError: expected [ 'Otis', 'Garfield', 'Garfield' ] to have the same ordered members as [ 'Otis', 'Garfield' ]\n    at Context.<anonymous> (test/indexTest.js:45:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "appends a cat to the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions appendCat(name) appends a cat to the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 1,
+      "duration": 3,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ Array(5) ] to have the same ordered members as [ 'Milo', 'Otis', 'Garfield', 'Broom' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Milo\"\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n  \"Broom\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n  \"Broom\"\n]",
+        "stack": "AssertionError: expected [ Array(5) ] to have the same ordered members as [ 'Milo', 'Otis', 'Garfield', 'Broom' ]\n    at Context.<anonymous> (test/indexTest.js:51:52)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "prepends a cat to the cats array and returns a new array, leaving the cats array unchanged",
@@ -62,7 +86,7 @@
     {
       "title": "removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions removeLastCat() removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -75,47 +99,72 @@
     }
   ],
   "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
-      "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
-      "duration": 3,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "appends a cat to the end of the cats array",
-      "fullTitle": "index.js Array functions destructivelyAppendCat(name) appends a cat to the end of the cats array",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
+  "failures": [
     {
       "title": "prepends a cat to the beginning of the cats array",
       "fullTitle": "index.js Array functions destructivelyPrependCat(name) prepends a cat to the beginning of the cats array",
-      "duration": 1,
+      "duration": 2,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Bob', 'Milo', 'Otis' ] to have the same ordered members as [ 'Bob', 'Milo', 'Otis', 'Garfield' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Bob\"\n  \"Milo\"\n  \"Otis\"\n]",
+        "expected": "[\n  \"Bob\"\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n]",
+        "stack": "AssertionError: expected [ 'Bob', 'Milo', 'Otis' ] to have the same ordered members as [ 'Bob', 'Milo', 'Otis', 'Garfield' ]\n    at Context.<anonymous> (test/indexTest.js:29:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "removes the last cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveLastCat() removes the last cat from the cats array",
       "duration": 1,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Otis' ] to have the same ordered members as [ 'Milo', 'Otis' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Otis\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n]",
+        "stack": "AssertionError: expected [ 'Otis' ] to have the same ordered members as [ 'Milo', 'Otis' ]\n    at Context.<anonymous> (test/indexTest.js:37:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "removes the first cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveFirstCat() removes the first cat from the cats array",
       "duration": 1,
       "currentRetry": 0,
-      "err": {}
+      "err": {
+        "message": "expected [ 'Otis', 'Garfield', 'Garfield' ] to have the same ordered members as [ 'Otis', 'Garfield' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Otis\"\n  \"Garfield\"\n  \"Garfield\"\n]",
+        "expected": "[\n  \"Otis\"\n  \"Garfield\"\n]",
+        "stack": "AssertionError: expected [ 'Otis', 'Garfield', 'Garfield' ] to have the same ordered members as [ 'Otis', 'Garfield' ]\n    at Context.<anonymous> (test/indexTest.js:45:38)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
     },
     {
       "title": "appends a cat to the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions appendCat(name) appends a cat to the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 1,
+      "duration": 3,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected [ Array(5) ] to have the same ordered members as [ 'Milo', 'Otis', 'Garfield', 'Broom' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Milo\"\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n  \"Broom\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n  \"Broom\"\n]",
+        "stack": "AssertionError: expected [ Array(5) ] to have the same ordered members as [ 'Milo', 'Otis', 'Garfield', 'Broom' ]\n    at Context.<anonymous> (test/indexTest.js:51:52)\n    at process.processImmediate (node:internal/timers:478:21)"
+      }
+    }
+  ],
+  "passes": [
+    {
+      "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "appends a cat to the end of the cats array",
+      "fullTitle": "index.js Array functions destructivelyAppendCat(name) appends a cat to the end of the cats array",
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     },
@@ -129,7 +178,7 @@
     {
       "title": "removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions removeLastCat() removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
